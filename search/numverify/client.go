@@ -90,5 +90,5 @@ func (c *client) Search(query ...string) ([]search.Result, error) {
 		log.Println(err)
 	}
 
-	return nil, nil
+	return []search.Result{record.AsResult()}, nil
 }
