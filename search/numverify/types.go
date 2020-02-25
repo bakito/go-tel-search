@@ -31,5 +31,6 @@ func (r *Record) AsResult() search.Result {
 		CountryCode:   r.CountryCode,
 		CountryPrefix: r.CountryPrefix,
 		CountryName:   r.CountryName,
+		Plain:         r,
 	}
 }

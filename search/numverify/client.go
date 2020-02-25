@@ -13,7 +13,7 @@ import (
 
 const (
 	// DefaultURL the default api service url
-	DefaultURL = "http://apilayer.net/api/validate/"
+	DefaultURL = "http://apilayer.net/api/validate"
 )
 
 // New create a new client with the given key
