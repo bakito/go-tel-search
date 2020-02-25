@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "error": {
+    "code": 210,
+    "type": "no_phone_number_provided",
+    "info": "Please specify a phone number. [Example: 14158586273]"
+  }
+}
