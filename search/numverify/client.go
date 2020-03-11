@@ -90,5 +90,9 @@ func (c *client) Search(query ...string) ([]search.Result, error) {
 		log.Println(err)
 	}
 
+	if !record.Valid {
+		return nil, fmt.Errorf("invalid number")
+	}
+
 	return []search.Result{record.AsResult()}, nil
 }
