@@ -1,9 +1,9 @@
 package searchch_test
 
 import (
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"testing"
 
 	"github.com/bakito/go-tel-search/search"
@@ -15,7 +15,7 @@ import (
 
 func Test_Search_Success(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		content, err := ioutil.ReadFile("../../testdata/searchch/api-response.xml")
+		content, err := os.ReadFile("../../testdata/searchch/api-response.xml")
 		Assert(t, is.Nil(err))
 		_, err = w.Write(content)
 		Assert(t, is.Nil(err))
@@ -40,7 +40,7 @@ func Test_Search_Success(t *testing.T) {
 
 func Test_Search_Error(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		content, err := ioutil.ReadFile("../../testdata/searchch/api-error.xml")
+		content, err := os.ReadFile("../../testdata/searchch/api-error.xml")
 		Assert(t, is.Nil(err))
 		w.WriteHeader(http.StatusForbidden)
 		_, err = w.Write(content)
