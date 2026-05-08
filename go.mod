@@ -3,7 +3,7 @@ module github.com/bakito/go-tel-search
 go 1.25.0
 
 require (
-	golang.org/x/text v0.36.0
+	golang.org/x/text v0.37.0
 	gotest.tools v2.2.0+incompatible
 )
 
