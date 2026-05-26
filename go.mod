@@ -1,6 +1,6 @@
 module github.com/bakito/go-tel-search
 
-go 1.25.0
+go 1.26.3
 
 require (
 	golang.org/x/text v0.37.0

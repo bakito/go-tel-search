@@ -96,7 +96,7 @@ func (c *client) Search(query ...string) ([]search.Result, error) {
 	return results, err
 }
 
-func parseXML(xmlDoc io.Reader, target interface{}) error {
+func parseXML(xmlDoc io.Reader, target any) error {
 	decoder := xml.NewDecoder(xmlDoc)
 	decoder.CharsetReader = makeCharsetReader
 	return decoder.Decode(target)
